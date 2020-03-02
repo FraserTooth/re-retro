@@ -1,4 +1,13 @@
 class RetrosController < ApplicationController
+    def index
+        @retro = Retro.all
+    end
+    
+    def show
+        @retro = Retro.find(params[:id])
+    end
+
+
     def new
     end
 
