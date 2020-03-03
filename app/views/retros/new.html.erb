@@ -1,36 +1,3 @@
 <h1>New Retro</h1>
-<%= form_with scope: :retro, url: retros_path, local: true do |form| %>
-  <% if @retro.errors.any? %>
-    <div id="error_explanation">
-      <h2>
-        <%= pluralize(@retro.errors.count, "error") %> prohibited
-        this retrospective from being saved:
-      </h2>
-      <ul>
-        <% @retro.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <p>
-    <%= form.label :facilitator %><br>
-    <%= form.text_field :facilitator %>
-  </p>
-  <p>
-    <%= form.label :team %><br>
-    <%= form.text_field :team %>
-  </p>
-  <p>
-    <%= form.label :date %><br>
-    <%= form.date_field :date %>
-  </p>
-  <p>
-    <%= form.label :introduction %><br>
-    <%= form.text_area :introduction %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<%= render 'form' %>
 <%= link_to 'Back', retros_path %>
