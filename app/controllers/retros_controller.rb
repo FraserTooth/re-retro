@@ -37,6 +37,13 @@ class RetrosController < ApplicationController
     end
   end
 
+  def destroy
+    @retro = Retro.find(params[:id])
+    @retro.destroy
+
+    redirect_to retros_path
+  end
+
   private
 
   def retro_params
