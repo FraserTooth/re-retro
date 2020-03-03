@@ -1,5 +1,4 @@
 <h1>Listing Articles</h1>
- 
 <table>
   <tr>
     <th>Facilitator</th>
@@ -8,7 +7,6 @@
     <th>Introduction</th>
     <th></th>
   </tr>
- 
   <% @retro.each do |retro| %>
     <tr>
       <td><%= retro.facilitator %></td>
@@ -16,8 +14,8 @@
       <td><%= retro.date %></td>
       <td><%= retro.introduction %></td>
       <td><%= link_to 'Show', retro_path(retro) %></td>
+      <td><%= link_to 'Edit', edit_retro_path(retro) %></td>
     </tr>
   <% end %>
 </table>
-
 <%= link_to 'New Retro', new_retro_path %>

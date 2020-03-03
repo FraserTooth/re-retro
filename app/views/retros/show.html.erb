@@ -2,18 +2,17 @@
   <strong>Facilitator:</strong>
   <%= @retro.facilitator %>
 </p>
- 
 <p>
   <strong>Date:</strong>
   <%= @retro.date %>
 </p>
-
 <p>
   <strong>Team:</strong>
   <%= @retro.team %>
 </p>
-
 <p>
   <strong>Introduction:</strong>
   <%= @retro.introduction %>
 </p>
+<%= link_to 'Edit', edit_retro_path(@retro) %> |
+<%= link_to 'Back', retros_path %>
