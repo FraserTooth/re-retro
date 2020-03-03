@@ -9,14 +9,18 @@ class RetrosController < ApplicationController
 
 
     def new
+        @retro = Retro.new
     end
 
     def create
 
         @retro = Retro.new(retro_params)
- 
-        @retro.save
-        redirect_to @retro
+
+        if @retro.save
+            redirect_to @retro
+        else
+            render 'new'
+        end
     end
 
     private
